@@ -46,7 +46,7 @@ namespace DBSD_Final.DAL.Repos
         {
             using var conn = new SqlConnection(_connStr);
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = "spGetProductsByID";
+            cmd.CommandText = "spGetProductByID";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ProductID", id);
 

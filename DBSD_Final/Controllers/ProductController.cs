@@ -70,12 +70,16 @@ namespace DBSD_Final.Controllers
             }
         }
 
+        public ActionResult Delete(int id)
+        {
+            return View(_productRepository.GetById(id));
+        }
 
 
         // POST: ProductController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public ActionResult DeleteConfirmation(int id)
         {
             try
             {
